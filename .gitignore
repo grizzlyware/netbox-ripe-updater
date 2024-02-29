@@ -5,6 +5,7 @@
 docker-compose.override.yml
 .DS_Store
 .env.updater
+.env
 .vscode
 .tox
 .coverage

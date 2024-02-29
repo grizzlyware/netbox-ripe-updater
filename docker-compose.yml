@@ -6,3 +6,5 @@ services:
         dockerfile: Dockerfile
     env_file:
       - .env.updater
+    ports:
+      - "${UPDATER_HTTP_PORT}:80"
