@@ -20,13 +20,20 @@ git clone https://github.com/grizzlyware/netbox-ripe-updater.git
 cd netbox-ripe-updater
 cp .env.example .env
 cp .env.updater.example .env.updater
-docker compose up # -d flag to daemonize
 ```
 
 ### Configuration
 
 * Configure the `.env` and `.env.updater` files to match your environment.
 * Configure/copy templates in the `templates` directory to match your environment (to the custom directory usually).
+
+### Running
+
+After configuration and templates, start the containers:
+
+```bash
+docker compose up # -d flag to daemonize
+```
 
 ## ripe-updater
 
