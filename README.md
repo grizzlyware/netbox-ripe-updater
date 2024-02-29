@@ -55,5 +55,6 @@ If the application is hosted on a different machine, you should consider overrid
 
 * [Netwise Hosting Ltd - UK Colocation](https://www.netwise.co.uk)
 
-![image](https://github.com/grizzlyware/netbox-ripe-updater/assets/1097093/d8e86231-9f59-4981-b196-c156a5fed326)
+![image](https://github.com/grizzlyware/netbox-ripe-updater/assets/1097093/4531d922-4a78-4abd-a173-4cf14a969b3e)
+
 
