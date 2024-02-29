@@ -37,7 +37,13 @@ Most of the README is still applicable, with some defaults being changed to matc
 
 ## Tips
 
-If this application is being hosted on the same machine as Netbox, you should reverse proxy the `/backup` endpoints to the Netbox instance to benefit from TLS.
+If this application is being hosted on the same machine as Netbox, you should reverse proxy the application to the Netbox instance to benefit from TLS:
 
-If the application is hosted on a different machine, you should consider overriding the docker-compose.yml file to include a HTTPS server such as Caddy to expose the updater via TLS. When doing this, the host port binding of 9000 (`UPDATER_HTTP_PORT`) should be removed, and the HTTP proxy exposed on the host instead.
+```nginx
+location /ripe-updater/ {
+    proxy_pass http://127.0.0.1:9000/;
+} 
+```
+
+If the application is hosted on a different machine, you should consider overriding the docker-compose.yml file to include a HTTPS server such as Caddy to expose the updater via automatic TLS. When doing this, the host port binding of 9000 (`UPDATER_HTTP_PORT`) should be removed, and the HTTP proxy exposed on the host instead.
 
