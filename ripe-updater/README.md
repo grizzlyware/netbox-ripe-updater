@@ -19,35 +19,9 @@ ripe-updater is a [Flask](https://flask.palletsprojects.com/) based Python app. 
 ### Getting started
 These steps are mandatory to get ripe-updater up and running.
 1. deploy ripe-updater
-1. configure ripe-updater
-1. configure NetBox
-1. setup templates
-
-### Containerized (recommended)
-Copy and edit `.env`
-```
-cp .env.example .env
-vi .env
-docker run \
-  -p 8000:80 \
-  -v "/home/user/ripe-updater/templates:/opt/ripeupdater/templates:ro" \
-  --env-file .env \
-  interdotlink/ripe-updater
-```
-
-#### docker-compose
-Copy and edit `docker-compose.override.yml`
-```
-cp docker-compose.override.example.yml docker-compose.override.yml
-docker-compose up -d
-```
-
-### Installation on Linux
-Edit `ripeupdater/configuration.py`.
-```
-pip install -r requirements.txt
-python -m gunicorn -b :80 -w 2 ripeupdater.main:app
-```
+2. configure ripe-updater
+3. configure NetBox
+4. setup templates
 
 ### Note for production deployments
 

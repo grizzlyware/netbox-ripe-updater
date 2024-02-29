@@ -47,3 +47,6 @@ location /ripe-updater/ {
 
 If the application is hosted on a different machine, you should consider overriding the docker-compose.yml file to include a HTTPS server such as Caddy to expose the updater via automatic TLS. When doing this, the host port binding of 9000 (`UPDATER_HTTP_PORT`) should be removed, and the HTTP proxy exposed on the host instead.
 
+## Authors
+
+* [Josh Bonfield (Grizzlyware Ltd)](https://www.grizzlyware.com)
