@@ -176,7 +176,13 @@ class ObjectBuilder:
             data = self.webhook
 
             custom_fields = data['data']['custom_fields']
-            return custom_fields.get('ripe_netname', self.netbox_template())
+
+            netname = custom_fields.get('ripe_netname')
+
+            if not netname:
+                netname = self.netbox_template()
+
+            return netname
 
     def country(self):
         """
