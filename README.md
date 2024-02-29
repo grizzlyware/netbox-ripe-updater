@@ -35,6 +35,17 @@ After configuration and templates, start the containers:
 docker compose up # -d flag to daemonize
 ```
 
+### Updating
+
+To update the containers, pull the latest changes and restart the containers:
+
+```bash
+git pull
+docker compose up -d
+```
+
+You may sometimes need to rebuild the containers using `docker compose build`, for example if the Dockerfile or Python code has changed.
+
 ## ripe-updater
 
 The ripe-updater can be found at: [./ripe-updater](./ripe-updater)
