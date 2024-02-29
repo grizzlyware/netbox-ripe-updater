@@ -11,4 +11,7 @@ docker-compose.override.yml
 .tox
 .coverage
 .idea
-/minio/data
+/minio/data/*
+!/minio/data/.gitkeep
+/ripe-templates/custom/*
+!/ripe-templates/custom/.gitkeep
