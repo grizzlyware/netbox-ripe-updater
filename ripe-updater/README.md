@@ -56,33 +56,33 @@ For production use it is recommended, to setup a reverse proxy e.g. Nginx in fro
 ## Configuration
 Configuration is set via environment variables, but you can also edit `ripeupdater/configuration.py`.
 
-| parameter | values | default | description |
-| --- | --- | --- | --- |
-| DEBUG | yes/no | no | enables verbose logging |
-| MAIL_REPORT | yes/no | no | enables email-reporting |
-| SMTP | url | 127.0.0.1 | url or ip of smtp server |
-| SMTP_STARTTLS | yes/no | no | use STARTTLS when connecting to smtp server |
-| SENDER_MAIL | email | - | sender mail of email-reports |
-| RECIPIENT_MAIL | email | - | receiver of email-reports |
-| UPDATE_TOKEN | string | - | if set, each netbox webhook must contain this tokes as Authorisation header |
-| NETBOX_URL | url | - | url of your netbox instance |
-| NETBOX_TOKEN | string | - | netbox token, which can read prefixes, aggregates, regions and sites |
-| DEFAULT_COUNTRY | ISO3166-II country | - | default country if none could be determined, e.g. DE or NL |
-| TEMPLATES_DIR | path | /opt/ripeupdater/templates | location of templates |
-| RIPE_MNT_PASSWORD | string | - | ripe maintainer password with write permissions to your INET(6)NUM objects |
-| RIPE_DB | RIPE/TEST | TEST | which ripe-db to use |
-| RIPE_TEST_MNT | string | TEST-DBM-MNT | which maintainer to use in the TEST database, as your maintainer may not be present |
-| RIPE_TEST_ORG | string | ORG-EIPB1-TEST | which organisation to use in the TEST database, as your organisation may not be present |
-| RIPE_TEST_PERSON | string | AA1-TEST | which person to use in the TEST database, as your person may not be present |
-| RIPE_TEST_STATUS_V4 | string | ALLOCATED PA | which status to use in the TEST database, as your status may not be able to be set. Your parent INETNUM object, with your MNT-LOWER attribute set to your maintainer may be missing.  |
-| RIPE_TEST_STATUS_V6 | string | ALLOCATED PA | which status to use in the TEST database, as your status may not be able to be set. Your parent INET6NUM object, with your MNT-LOWER attribute set to your maintainer may be missing. |
-| SMALLEST_PREFIX_V4 | 0-32 | 31 | prefix length bigger than this limit will not be handled |
-| SMALLEST_PREFIX_V6 | 0-128 | 127 | prefix length bigger than this limit will not be handled |
-| S3_BACKUP | yes/no | no | enable or disable S3 backups |
-| S3_ENDPOINT_URL | url | - | specify url of your s3 endpoint |
-| S3_ACCESS_KEY | string | - | access key to your s3 storage |
-| S3_SECRET_ACCESS_KEY | string | - | secret access key to your s3 storage |
-| S3_BUCKET | string | - | bucket to store backups in |
+| parameter            | values             | default                    | description                                                                                                                                                                           |
+|----------------------|--------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DEBUG                | yes/no             | no                         | enables verbose logging                                                                                                                                                               |
+| MAIL_REPORT          | yes/no             | no                         | enables email-reporting                                                                                                                                                               |
+| SMTP                 | url                | 127.0.0.1                  | url or ip of smtp server                                                                                                                                                              |
+| SMTP_STARTTLS        | yes/no             | no                         | use STARTTLS when connecting to smtp server                                                                                                                                           |
+| SENDER_MAIL          | email              | -                          | sender mail of email-reports                                                                                                                                                          |
+| RECIPIENT_MAIL       | email              | -                          | receiver of email-reports                                                                                                                                                             |
+| UPDATE_TOKEN         | string             | -                          | if set, each netbox webhook must contain this tokes as Authorisation header                                                                                                           |
+| NETBOX_URL           | url                | -                          | url of your netbox instance                                                                                                                                                           |
+| NETBOX_TOKEN         | string             | -                          | netbox token, which can read prefixes, aggregates, regions and sites                                                                                                                  |
+| DEFAULT_COUNTRY      | ISO3166-II country | -                          | default country if none could be determined, e.g. DE or NL                                                                                                                            |
+| TEMPLATES_DIR        | path               | /opt/ripeupdater/templates | location of templates                                                                                                                                                                 |
+| RIPE_MNT_PASSWORD    | string             | -                          | ripe maintainer password with write permissions to your INET(6)NUM objects                                                                                                            |
+| RIPE_DB              | RIPE/TEST          | TEST                       | which ripe-db to use                                                                                                                                                                  |
+| RIPE_TEST_MNT        | string             | TEST-DBM-MNT               | which maintainer to use in the TEST database, as your maintainer may not be present                                                                                                   |
+| RIPE_TEST_ORG        | string             | ORG-EIPB1-TEST             | which organisation to use in the TEST database, as your organisation may not be present                                                                                               |
+| RIPE_TEST_PERSON     | string             | AA1-TEST                   | which person to use in the TEST database, as your person may not be present                                                                                                           |
+| RIPE_TEST_STATUS_V4  | string             | ALLOCATED PA               | which status to use in the TEST database, as your status may not be able to be set. Your parent INETNUM object, with your MNT-LOWER attribute set to your maintainer may be missing.  |
+| RIPE_TEST_STATUS_V6  | string             | ALLOCATED PA               | which status to use in the TEST database, as your status may not be able to be set. Your parent INET6NUM object, with your MNT-LOWER attribute set to your maintainer may be missing. |
+| SMALLEST_PREFIX_V4   | 0-32               | 31                         | prefix length bigger than this limit will not be handled                                                                                                                              |
+| SMALLEST_PREFIX_V6   | 0-128              | 127                        | prefix length bigger than this limit will not be handled                                                                                                                              |
+| S3_BACKUP            | yes/no             | no                         | enable or disable S3 backups                                                                                                                                                          |
+| S3_ENDPOINT_URL      | url                | -                          | specify url of your s3 endpoint                                                                                                                                                       |
+| S3_ACCESS_KEY        | string             | -                          | access key to your s3 storage                                                                                                                                                         |
+| S3_SECRET_ACCESS_KEY | string             | -                          | secret access key to your s3 storage                                                                                                                                                  |
+| S3_BUCKET            | string             | -                          | bucket to store backups in                                                                                                                                                            |
 
 ### NetBox configuration
 You'll need to add three custom fields to NetBox and data needs to be structured in a specific way.
