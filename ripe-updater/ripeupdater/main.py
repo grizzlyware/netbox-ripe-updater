@@ -12,6 +12,7 @@ import os
 
 from flask import Flask, abort, request, render_template
 from flask.logging import default_handler
+from flask_basicauth import BasicAuth
 
 from .backup_manager import BackupManager
 from .log_manager import LogManager
@@ -31,6 +32,13 @@ app.logger.removeHandler(default_handler)
 app.logger.addHandler(logger)
 backup = BackupManager()
 
+if not UI_USER or not UI_PASSWORD:
+    raise ValueError('UI_USER or UI_PASSWORD not set')
+
+app.config['BASIC_AUTH_USERNAME'] = UI_USER
+app.config['BASIC_AUTH_PASSWORD'] = UI_PASSWORD
+
+basic_auth = BasicAuth(app)
 
 @app.route('/health')
 def check_health():
@@ -39,12 +47,14 @@ def check_health():
 
 
 @app.route('/backups')
+@basic_auth.required
 def list_backups():
     logger.info('list backups')
     return render_template('backups.html', backups=backup.list())
 
 
 @app.route('/backup/<name>')
+@basic_auth.required
 def get_backup(name):
     logger.info('get backup')
     return backup.get(name)

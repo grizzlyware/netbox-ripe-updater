@@ -44,6 +44,18 @@ RECIPIENT_MAIL = getenv('RECIPIENT_MAIL')
 # default: -
 UPDATE_TOKEN = getenv('UPDATE_TOKEN')
 
+# UI_USER
+# Access to the UI is protected by basic auth. This is the username
+# values: string
+# default: -
+UI_USER = getenv('UI_USER')
+
+# UI_PASSWORD
+# Access to the UI is protected by basic auth. This is the password
+# values: string
+# default: -
+UI_PASSWORD = getenv('UI_PASSWORD')
+
 # NETBOX_URL
 # url of your netbox instance
 # values: url
