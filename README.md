@@ -50,3 +50,10 @@ If the application is hosted on a different machine, you should consider overrid
 ## Authors
 
 * [Josh Bonfield (Grizzlyware Ltd)](https://www.grizzlyware.com)
+
+## Sponsors
+
+* [Netwise Hosting Ltd - UK Colocation](https://www.netwise.co.uk)
+
+![image](https://github.com/grizzlyware/netbox-ripe-updater/assets/1097093/d8e86231-9f59-4981-b196-c156a5fed326)
+
