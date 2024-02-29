@@ -32,7 +32,7 @@ class BackupManager:
                 self.logger.info(f"creating bucket {S3_BUCKET}")
                 self.s3.create_bucket(Bucket=S3_BUCKET)
             except ClientError as error:
-                if error.response['Error']['Code'] == 'BucketAlreadyExists':
+                if error.response['Error']['Code'] == 'BucketAlreadyExists' or error.response['Error']['Code'] == 'BucketAlreadyOwnedByYou':
                     self.logger.info("bucket already exists")
                 else:
                     raise error
