@@ -138,28 +138,28 @@ SMALLEST_PREFIX_V6 = getenv('SMALLEST_PREFIX_V6', '127')
 # enable or disable S3 backups
 # values: yes/no
 # default: no
-S3_BACKUP = getenv('S3_BACKUP', 'no')
+S3_BACKUP = getenv('S3_BACKUP', 'yes')
 
 # S3_ENDPOINTURL
 # specify url of your s3 endpoint
 # values: url
 # default: -
-S3_ENDPOINT_URL = getenv('S3_ENDPOINT_URL')
+S3_ENDPOINT_URL = getenv('S3_ENDPOINT_URL', 'http://minio:9000')
 
 # S3_ACCESS_KEY
 # access key to your s3 storage
 # values: string
 # default: -
-S3_ACCESS_KEY = getenv('S3_ACCESS_KEY')
+S3_ACCESS_KEY = getenv('S3_ACCESS_KEY', 'CjGb9PDkjQqMi6V')
 
 # S3_SECRET_ACCESS_KEY
 # secret access key to your s3 storage
 # values: string
 # default: -
-S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY')
+S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY', '8s82NHXq6pPsJAP4S')
 
 # S3_BUCKET
 # bucket to store backups in
 # values: string
 # default: -
-S3_BUCKET = getenv('S3_BUCKET')
+S3_BUCKET = getenv('S3_BUCKET', 'ripe-backups')
