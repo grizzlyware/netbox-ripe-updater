@@ -92,36 +92,6 @@ RIPE_MNT_PASSWORD = getenv('RIPE_MNT_PASSWORD')
 # default: TEST
 RIPE_DB = getenv('RIPE_DB', 'TEST')
 
-# RIPE_TEST_MNT
-# which maintainer to use in the TEST database, as your maintainer may not be present
-# values: string
-# default: TEST-DBM-MNT
-RIPE_TEST_MNT = getenv('RIPE_TEST_MNT', 'TEST-DBM-MNT')
-
-# RIPE_TEST_ORG
-# which organisation to use in the TEST database, as your organisation may not be present
-# values: string
-# default: ORG-EIPB1-TEST
-RIPE_TEST_ORG = getenv('RIPE_TEST_ORG', 'ORG-EIPB1-TEST')
-
-# RIPE_TEST_PERSON
-# which person to use in the TEST database, as your person may not be present
-# values: string
-# default: AA1-TEST
-RIPE_TEST_PERSON = getenv('RIPE_TEST_PERSON', 'AA1-TEST')
-
-# RIPE_TEST_STATUS_V4
-# which status to use in the TEST database, as your status may not be able to be set. Your parent INETNUM object, with your MNT-LOWER attribute set to your maintainer may be missing. 
-# values: string
-# default: ALLOCATED PA
-RIPE_TEST_STATUS_V4 = getenv('RIPE_TEST_STATUS_V4', 'ALLOCATED PA')
-
-# RIPE_TEST_STATUS_v6
-# which status to use in the TEST database, as your status may not be able to be set. Your parent INET6NUM object, with your MNT-LOWER attribute set to your maintainer may be missing.
-# values: string
-# default: ALLOCATED PA
-RIPE_TEST_STATUS_V6 = getenv('RIPE_TEST_STATUS_V6', 'ALLOCATED PA')
-
 # SMALLEST_PREFIX_V4
 # prefix length bigger than this limit will not be handled
 # values: 0-32

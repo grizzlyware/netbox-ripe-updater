@@ -211,19 +211,9 @@ class RipeObjectManager():
         for item in all_fields:
             for key in item.keys():
                 if RIPE_DB == 'TEST':
-                    # patch attributes, that don't exist in TEST DB
-                    if key == 'org':
-                        item[key] = RIPE_TEST_ORG
-                    if key in ['mnt-by', 'mnt-ref', 'mnt-lower', 'mnt-domains', 'mnt-routes', 'mnt-irt']:
-                        item[key] = RIPE_TEST_MNT
-                    if key in ['admin-c', 'tech-c', 'abuse-c']:
-                        item[key] = RIPE_TEST_PERSON
+                    # Ensure that the source is set to TEST
                     if key == 'source':
                         item[key] = RIPE_DB
-                    if key == 'status':
-                        # override status, as parent objects with mnt-lower may not be present in TEST-DB
-                        item[key] = RIPE_TEST_STATUS_V6 if is_v6(self.prefix) else RIPE_TEST_STATUS_V4
-                    self.status = RIPE_TEST_STATUS_V6 if is_v6(self.prefix) else RIPE_TEST_STATUS_V4
 
                 if key == 'descr':
                     # Sort descr fields up second place. Counting from 0
