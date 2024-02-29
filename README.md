@@ -16,7 +16,7 @@ A Docker Compose wrapper for the [RIPE updater](https://github.com/interdotlink/
 ## Setup
 
 ```bash
-git clone git@github.com:grizzlyware/netbox-ripe-updater.git
+git clone https://github.com/grizzlyware/netbox-ripe-updater.git
 cd netbox-ripe-updater
 cp .env.example .env
 cp .env.updater.example .env.updater
