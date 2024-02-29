@@ -44,6 +44,7 @@ class BackupManager:
         upload an object to s3
         """
         if S3_BACKUP == 'yes':
+            self.logger.info("putting object to s3: " + filename)
             return self.s3.put_object(
                 Bucket=S3_BUCKET,
                 Key=filename,

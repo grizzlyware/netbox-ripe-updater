@@ -22,10 +22,16 @@ services:
     env_file:
       - .env.minio
     volumes:
-      - "./minio/data:/data"
+      - "minio-data:/bitnami/minio/data"
     networks:
       - ripe-updater
 
 networks:
     ripe-updater:
         driver: bridge
+
+volumes:
+    minio-data:
+        driver: local
+
+
