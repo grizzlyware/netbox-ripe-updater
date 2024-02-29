@@ -87,6 +87,13 @@ You'll need to add three custom fields to NetBox and data needs to be structured
 * Required: no
 * Choices: ***all templates you have created***
 
+#### custom field - ripe_netname
+* Name: `ripe_netname`
+* Label: RIPE Netname
+* Assigned Models: ipam -> prefixes
+* Type: String
+* Required: no
+
 #### region - country
 Your sites need to have a country as a parent region found in [iso3166.countries_by_name](https://github.com/deactivated/python-iso3166)
 

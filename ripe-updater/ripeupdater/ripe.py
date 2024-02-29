@@ -67,6 +67,7 @@ class RipeObjectManager():
         self.org = netbox_object.org()
         self.netbox_template = netbox_object.netbox_template()
         self.country = netbox_object.country()
+        self.netname = netbox_object.netbox_netname()
 
         # always create a backup
         self.backup_ripe_object()
@@ -193,7 +194,7 @@ class RipeObjectManager():
 
         # List of dynamic generated attributes from prefix, This list is to guarantee the sequence
         dynamic_attributes = [{self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)},
-                              {'netname': self.netbox_template},
+                              {'netname': self.netname},
                               {'org': self.org},
                               {'country': self.country}]
 

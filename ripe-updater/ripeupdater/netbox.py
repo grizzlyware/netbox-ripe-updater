@@ -169,6 +169,15 @@ class ObjectBuilder:
         else:
             return False
 
+    def netbox_netname(self):
+            """
+            Returns ripe_netname as string
+            """
+            data = self.webhook
+
+            custom_fields = data['data']['custom_fields']
+            return custom_fields.get('ripe_netname', self.netbox_template())
+
     def country(self):
         """
         Returns country as string
