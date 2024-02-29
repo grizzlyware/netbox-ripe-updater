@@ -2,7 +2,10 @@
 
 # Netbox RIPE Updater
 
-A Docker Compose wrapper for the RIPE updater and supporting utilities.
+A Docker Compose wrapper for the [RIPE updater](https://github.com/interdotlink/ripe-updater) and supporting utilities, including local backups.
+
+> [!NOTE]  
+> Credit to the original authors of `ripe-updater`, see: https://github.com/interdotlink/ripe-updater
 
 ## Requirements
 
