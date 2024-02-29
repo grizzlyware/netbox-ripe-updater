@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  ripe-updater:
+    build:
+        context: ./ripe-updater
+        dockerfile: Dockerfile
+    env_file:
+      - .env.updater
