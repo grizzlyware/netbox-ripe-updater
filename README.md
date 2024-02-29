@@ -57,6 +57,7 @@ Most of the README is still applicable, with some defaults being changed to matc
 * The `/backup` endpoints are now authorised by HTTP basic auth, set via `UI_USER` & `UI_PASSWORD` in the `.env.updater` file
 * Backups are enabled by default to a local Docker instance of Minio. Credentials are hard coded, but the Minio container is not bound to the host, so it's not accessible from the outside world
 * Minor tweaks and fixes
+* The `_TEST_` environment variables are not used, testing can be achieved by changing `RIPE_TEMPLATE_DIR`
 
 ## Tips
 
