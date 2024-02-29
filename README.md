@@ -18,4 +18,7 @@ cp .env.updater.example .env.updater
 docker compose up # -d flag to daemonize
 ```
 
+## ripe-updater
+
+The ripe-updater can be found at: [./ripe-updater](./ripe-updater)
 
