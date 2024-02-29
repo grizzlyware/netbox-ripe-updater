@@ -12,7 +12,7 @@ services:
     networks:
       - ripe-updater
     volumes:
-        - "./ripe-updater/templates:/opt/ripeupdater/templates:ro"
+        - "${RIPE_TEMPLATE_DIR}:/opt/ripeupdater/templates:ro"
     depends_on:
       - minio
 
