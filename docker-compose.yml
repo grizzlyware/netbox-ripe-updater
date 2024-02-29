@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   ripe-updater:
+    restart: unless-stopped
     build:
         context: ./ripe-updater
         dockerfile: Dockerfile
@@ -8,3 +9,23 @@ services:
       - .env.updater
     ports:
       - "${UPDATER_HTTP_PORT}:80"
+    networks:
+      - ripe-updater
+    volumes:
+        - "./ripe-updater/templates:/opt/ripeupdater/templates:ro"
+    depends_on:
+      - minio
+
+  minio:
+    restart: unless-stopped
+    image: docker.io/bitnami/minio:2024
+    env_file:
+      - .env.minio
+    volumes:
+      - "./minio/data:/data"
+    networks:
+      - ripe-updater
+
+networks:
+    ripe-updater:
+        driver: bridge

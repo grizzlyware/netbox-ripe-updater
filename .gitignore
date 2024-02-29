@@ -5,8 +5,10 @@
 docker-compose.override.yml
 .DS_Store
 .env.updater
+.env.minio
 .env
 .vscode
 .tox
 .coverage
 .idea
+/minio/data
