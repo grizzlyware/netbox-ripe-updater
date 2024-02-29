@@ -19,8 +19,10 @@ services:
   minio:
     restart: unless-stopped
     image: docker.io/bitnami/minio:2024
-    env_file:
-      - .env.minio
+    environment:
+      MINIO_ROOT_USER: CjGb9PDkjQqMi6V
+      MINIO_ROOT_PASSWORD: 8s82NHXq6pPsJAP4S
+      MINIO_DEFAULT_BUCKETS: ripe-backups
     volumes:
       - "minio-data:/bitnami/minio/data"
     networks:

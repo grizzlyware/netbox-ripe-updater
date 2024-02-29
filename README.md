@@ -15,7 +15,6 @@ git clone git@github.com:grizzlyware/netbox-ripe-updater.git
 cd netbox-ripe-updater
 cp .env.example .env
 cp .env.updater.example .env.updater
-cp .env.minio.example .env.minio
 docker compose up # -d flag to daemonize
 ```
 
