@@ -23,6 +23,11 @@ cp .env.updater.example .env.updater
 docker compose up # -d flag to daemonize
 ```
 
+### Configuration
+
+* Configure the `.env` and `.env.updater` files to match your environment.
+* Configure/copy templates in the `templates` directory to match your environment (to the custom directory usually).
+
 ## ripe-updater
 
 The ripe-updater can be found at: [./ripe-updater](./ripe-updater)
