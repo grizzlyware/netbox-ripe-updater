@@ -22,3 +22,5 @@ docker compose up # -d flag to daemonize
 
 The ripe-updater can be found at: [./ripe-updater](./ripe-updater)
 
+Most of the README is still applicable, with some defaults being changed to match the Docker Compose setup.
+
