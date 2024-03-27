@@ -27,6 +27,8 @@ cp .env.updater.example .env.updater
 * Configure the `.env` and `.env.updater` files to match your environment.
 * Configure/copy templates in the `templates` directory to match your environment (to the custom directory usually).
 
+
+
 ### Running
 
 After configuration and templates, start the containers:

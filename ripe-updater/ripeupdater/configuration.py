@@ -120,13 +120,13 @@ S3_ENDPOINT_URL = getenv('S3_ENDPOINT_URL', 'http://minio:9000')
 # access key to your s3 storage
 # values: string
 # default: -
-S3_ACCESS_KEY = getenv('S3_ACCESS_KEY', 'CjGb9PDkjQqMi6V')
+S3_ACCESS_KEY = getenv('S3_ACCESS_KEY', '')
 
 # S3_SECRET_ACCESS_KEY
 # secret access key to your s3 storage
 # values: string
 # default: -
-S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY', '8s82NHXq6pPsJAP4S')
+S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY', '')
 
 # S3_BUCKET
 # bucket to store backups in
