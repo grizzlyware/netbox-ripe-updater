@@ -72,7 +72,7 @@ class FetchData:
         self.logger.info('Finding the suitable ISO country name, which RIPE accepts')
         while region:
             country = region.slug.upper()
-            self.logger.info(f'testing region {country}')
+            self.logger.debug(f'testing region {country}')
             if country in countries_by_alpha2:
                 return country
             
