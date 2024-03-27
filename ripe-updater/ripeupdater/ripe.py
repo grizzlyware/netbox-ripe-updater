@@ -177,7 +177,10 @@ class RipeObjectManager():
         for t_attribute in template_attributes:
             for t_name, t_value in t_attribute.items():
                 if t_value:
-                    if t_name != 'org' and t_name != 'descr':
+                    if t_name == 'descr':
+                        if INCLUDE_DESCR == 'yes':
+                            templates_fields.append({t_name: t_value})
+                    elif t_name != 'org':
                         templates_fields.append({t_name: t_value})
                     else:
                         self.org = t_value
@@ -192,10 +195,16 @@ class RipeObjectManager():
                                     self.org = m_value
                                     master_fields.remove({m_name: m_value})
 
+        dynamic_attributes = []
+
         # List of dynamic generated attributes from prefix, This list is to guarantee the sequence
-        dynamic_attributes = [{self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)},
-                              {'netname': self.netname},
-                              {'country': self.country}]
+        dynamic_attributes.append({self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)})
+        dynamic_attributes.append({'netname': self.netname})
+
+        if INCLUDE_ORG == 'yes':
+            dynamic_attributes.append({'org': self.org})
+
+        dynamic_attributes.append({'country': self.country})
 
         # Gathering all templates in one list all_fields
         all_fields.extend(dynamic_attributes)
