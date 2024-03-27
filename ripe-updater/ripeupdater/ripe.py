@@ -198,7 +198,7 @@ class RipeObjectManager():
         dynamic_attributes = []
 
         # List of dynamic generated attributes from prefix, This list is to guarantee the sequence
-        dynamic_attributes.append({self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix))
+        dynamic_attributes.append({self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)})
         dynamic_attributes.append({'netname': self.netname})
 
         if INCLUDE_ORG == 'yes':
