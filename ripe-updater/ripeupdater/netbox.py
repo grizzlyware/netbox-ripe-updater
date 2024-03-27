@@ -66,8 +66,8 @@ class FetchData:
         This methode get for a prefix's country in ISO3166-II format
         ISO3166-II is expected from RIPE database
         """
-        sites = self.nb.dcim.sites.get(slug=site_slug)
-        region = self.nb.dcim.regions.get(slug=sites[0].region.slug)
+        site = self.nb.dcim.sites.get(slug=site_slug)
+        region = self.nb.dcim.regions.get(slug=site.region.slug)
 
         self.logger.info('Finding the suitable ISO country name, which RIPE accepts')
         while region:
