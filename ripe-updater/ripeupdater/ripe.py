@@ -179,6 +179,9 @@ class RipeObjectManager():
                 if t_value:
                     if t_name != 'org':
                         templates_fields.append({t_name: t_value})
+                    elif t_name == 'descr':
+                        if INCLUDE_DESCR == 'yes':
+                            templates_fields.append({t_name: t_value})
                     else:
                         self.org = t_value
                     for m_attribute in master_attributes:
