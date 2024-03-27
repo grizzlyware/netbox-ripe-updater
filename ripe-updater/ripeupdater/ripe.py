@@ -195,7 +195,6 @@ class RipeObjectManager():
         # List of dynamic generated attributes from prefix, This list is to guarantee the sequence
         dynamic_attributes = [{self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)},
                               {'netname': self.netname},
-                              #{'org': self.org},
                               {'country': self.country}]
 
         # Gathering all templates in one list all_fields
@@ -217,7 +216,7 @@ class RipeObjectManager():
 
                 if key == 'descr':
                     # Sort descr fields up second place. Counting from 0
-                    sorted_fields.insert(i_descr + 2, item)
+                    #sorted_fields.insert(i_descr + 2, item)
                     i_descr += 1
                 elif key == 'country':
                     # Sort country fields up fourth place. Counting from 0
