@@ -195,7 +195,6 @@ class RipeObjectManager():
         # List of dynamic generated attributes from prefix, This list is to guarantee the sequence
         dynamic_attributes = [{self.objecttype: self.prefix if is_v6(self.prefix) else format_cidr(self.prefix)},
                               {'netname': self.netname},
-                              #{'org': self.org},
                               {'country': self.country}]
 
         # Gathering all templates in one list all_fields
