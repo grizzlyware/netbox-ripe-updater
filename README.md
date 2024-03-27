@@ -42,6 +42,7 @@ To update the containers, pull the latest changes and restart the containers:
 ```bash
 git pull
 docker compose down
+docker compose build
 docker compose up -d
 ```
 
@@ -59,6 +60,7 @@ Most of the README is still applicable, with some defaults being changed to matc
 * Backups are enabled by default to a local Docker instance of Minio. Credentials are hard coded, but the Minio container is not bound to the host, so it's not accessible from the outside world
 * Minor tweaks and fixes
 * The `_TEST_` environment variables are not used, testing can be achieved by changing `RIPE_TEMPLATE_DIR`
+* The ISO Alpha 2 country code is fetched from the regions slug in Netbox, ie `gb` for the UK.
 
 ## Tips
 
