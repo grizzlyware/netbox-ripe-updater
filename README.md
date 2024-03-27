@@ -27,7 +27,8 @@ cp .env.updater.example .env.updater
 * Configure the `.env` and `.env.updater` files to match your environment.
 * Configure/copy templates in the `templates` directory to match your environment (to the custom directory usually).
 
-
+> [!WARNING]  
+> Ensure you update your `.env` and `.env.updater` to use non-default `MINIO_ROOT_USER`, `MINIO_ROOT_PASSWORD` `S3_ACCESS_KEY` & `S3_SECRET_ACCESS_KEY` variables
 
 ### Running
 
