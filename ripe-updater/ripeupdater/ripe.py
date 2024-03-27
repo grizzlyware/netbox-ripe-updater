@@ -177,7 +177,7 @@ class RipeObjectManager():
         for t_attribute in template_attributes:
             for t_name, t_value in t_attribute.items():
                 if t_value:
-                    if t_name != 'org':
+                    if t_name != 'org' and t_name != 'descr':
                         templates_fields.append({t_name: t_value})
                     else:
                         self.org = t_value
