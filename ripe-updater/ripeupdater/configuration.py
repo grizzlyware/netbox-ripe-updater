@@ -133,3 +133,12 @@ S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY', '')
 # values: string
 # default: -
 S3_BUCKET = getenv('S3_BUCKET', 'ripe-backups')
+
+# INCLUDE_ORG
+# Should the org attribute be set on the inetnum objects
+INCLUDE_ORG = getenv('INCLUDE_ORG', 'yes')
+
+# INCLUDE_DESCR
+# Should the descr attribute be set on the inetnum objects
+INCLUDE_DESCR = getenv('INCLUDE_DESCR', 'yes')
+
