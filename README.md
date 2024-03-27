@@ -41,6 +41,7 @@ To update the containers, pull the latest changes and restart the containers:
 
 ```bash
 git pull
+docker compose down
 docker compose up -d
 ```
 
