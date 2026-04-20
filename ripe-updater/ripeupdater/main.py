@@ -81,7 +81,7 @@ def update():
 
     # ensure valid netbox request
     try:
-        if webhook['model'] != 'prefix':
+        if webhook['object_type'] != 'ipam.prefix':
             msg = 'only prefixes are supported'
             logger.error(msg)
             return msg, 400
