@@ -184,16 +184,16 @@ class RipeObjectManager():
                         templates_fields.append({t_name: t_value})
                     else:
                         self.org = t_value
-                    for m_attribute in master_attributes:
-                        for m_name, m_value in m_attribute.items():
-                            if m_value:
-                                master_fields.append({m_name: m_value})
-                                if m_name in t_attribute.keys() and m_name != 'descr':
-                                    if m_name in t_attribute.keys() and m_name != 'country':
-                                        master_fields.remove({m_name: m_value})
-                                if m_name == 'org':
-                                    self.org = m_value
-                                    master_fields.remove({m_name: m_value})
+        for m_attribute in master_attributes:
+            for m_name, m_value in m_attribute.items():
+                if m_value:
+                    master_fields.append({m_name: m_value})
+                    if m_name in t_attribute.keys() and m_name != 'descr':
+                        if m_name in t_attribute.keys() and m_name != 'country':
+                            master_fields.remove({m_name: m_value})
+                    if m_name == 'org':
+                        self.org = m_value
+                        master_fields.remove({m_name: m_value})
 
         dynamic_attributes = []
 

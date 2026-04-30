@@ -1,4 +1,4 @@
-version: "3.8"
+---
 services:
   ripe-updater:
     restart: always
@@ -18,13 +18,18 @@ services:
 
   minio:
     restart: always
-    image: docker.io/bitnami/minio:2024
+    image: coollabsio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       MINIO_DEFAULT_BUCKETS: ripe-backups
     volumes:
-      - "minio-data:/bitnami/minio/data"
+      - "minio-data:/data"
+    command: server /data --console-address ":9001"
     networks:
       - ripe-updater
 
